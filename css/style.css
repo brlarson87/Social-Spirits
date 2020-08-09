@@ -191,8 +191,8 @@ body {
     height: 25vw;
     background-color: #fff;
     justify-self: center;
-    max-width: 440px;
-    max-height: 575px;
+    max-width: 425px;
+    max-height: 500px;
     border: solid 5px rgba(203, 145, 115, 0.33);
     padding: 1vw 1.5rem;
     border-radius: 2rem;
@@ -357,8 +357,8 @@ body {
     height: 25vw;
     background-color: #fff;
     justify-self: center;
-    max-width: 440px;
-    max-height: 575px;
+    max-width: 425px;
+    max-height: 500px;
     position: relative;
     display: grid;
     grid-template-rows: 60% repeat(2, 1fr);
@@ -394,7 +394,7 @@ body {
         justify-content: center;
         align-items: center; }
         .beer-section__card--final .half--1 {
-          background-image: url("../img/beer-1.jpg");
+          background-image: url("../img/beer-1-banner.jpg");
           background-size: cover;
           background-position: center; }
           .beer-section__card--final .half--1::after {
