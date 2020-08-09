@@ -1,0 +1,92 @@
+.heading-3 {
+  font-family: $font-secondary;
+  font-size: 2.1rem;
+  color: $color-grey-dark-2;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  grid-column-gap: 8px;
+
+  &::before,
+  &::after {
+    height: 5px;
+    border-radius: 2px;
+    background-color: currentColor;
+
+    content: "";
+    display: block;
+  }
+}
+
+.button {
+  border: none;
+  border-radius: none;
+  padding: 2rem 4rem;
+  background-color: $dark-purple;
+  font-size: 2.1rem;
+  color: $color-grey-light-1;
+  cursor: pointer;
+  font-family: $font-secondary;
+  transition: all 0.2s;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    background-color: darken($dark-purple, 2%);
+  }
+
+  &:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-link:link,
+.btn-link:visited {
+  color: $color-grey-dark-2;
+  font-size: 2rem;
+  font-family: $font-secondary;
+  transition: all 0.2s;
+}
+
+.btn-link:hover {
+  color: $dark-purple;
+}
+
+.small-heading {
+  display: inline-block;
+  font-size: 5rem;
+  font-style: italic;
+  color: rgba($dark-purple, 0.65);
+  text-shadow: 1px 2px 1px rgba($color-grey-dark-2, 0.65);
+  transform: rotate(-35deg) translate(8rem, -2rem);
+
+  @media only screen and(max-width: $largest-desktop-bp) {
+    transform: rotate(-35deg) translate(8rem, -1rem);
+  }
+
+  @media only screen and(max-width: $small-bp) {
+    transform: rotate(-35deg) translate(4rem, -1rem);
+    font-size: 3.8rem;
+  }
+}
+
+.large-heading {
+  font-size: 10rem;
+  color: rgba($color-grey-dark-2, 0.65);
+  text-shadow: 2px 3px 3px rgba($color-grey-dark-2, 0.75);
+  font-family: $font-secondary;
+  font-style: italic;
+
+  @media only screen and(max-width: $largest-desktop-bp) {
+    font-size: 8rem;
+  }
+
+  @media only screen and(max-width: $small-bp) {
+    font-size: 6rem;
+  }
+}

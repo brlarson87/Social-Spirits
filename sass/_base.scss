@@ -1,0 +1,59 @@
+// COLOR VARIABLES
+$dark-purple: #320a28ff;
+$tyrian-purple: #511730ff;
+$brandy: #8e443dff;
+$antique-brass: #cb9173ff;
+$flax: #e0d68aff;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// FONT VARIABLES
+$font-secondary: "Alegreya SC", serif;
+$font-primary: "Lora", serif;
+
+//BREAKPOINTS
+$largest-desktop-bp: 100em;
+$medium-bp: 43.75em;
+$large-bp: 75em;
+$small-bp: 50em;
+
+// reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and(min-width: $largest-desktop-bp) {
+    font-size: 75%;
+  }
+
+  @media only screen and(max-width: $small-bp) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-grey-light-1;
+}
+
+// GRID LAYOUT
+.container {
+  display: grid;
+  grid-template-rows: 6rem repeat(2, min-content) repeat(2, 80vh) repeat(
+      2,
+      max-content
+    );
+  grid-template-columns: repeat(16, 1fr);
+}

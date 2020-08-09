@@ -1,0 +1,108 @@
+.header {
+  background-color: #f9f7f6;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  display: grid;
+  // grid-template-columns: 1fr repeat(2, max-content);
+  grid-template-columns: 1fr 30rem max-content;
+  grid-column-gap: 2rem;
+  align-items: center;
+  padding: 0 0.5rem;
+
+  color: $dark-purple;
+
+  &__title {
+    position: relative;
+    justify-self: center;
+    align-self: end;
+    font-size: 5.2rem;
+    color: rgba($flax, 0.8);
+    font-style: italic;
+    z-index: 10;
+    transform: translateY(1rem);
+    text-shadow: 1px 1px 1px rgba($dark-purple, 0.35),
+      2px 2px 2px rgba($dark-purple, 0.4), 2px 2px 0 $color-grey-light-1,
+      3px 3px 0 $color-grey-light-1, -1px -1px 0 $color-grey-light-1,
+      -2px -2px 0 $color-grey-light-1, -3px 3px 0 $color-grey-light-1;
+  }
+
+  &__search-container {
+    position: relative;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      top: 0.8rem;
+      right: 1rem;
+      fill: $flax;
+      cursor: pointer;
+    }
+  }
+
+  &__search-bar {
+    justify-self: center;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    border: solid 1px $color-grey-light-2;
+    font-family: $font-primary;
+    color: currentColor;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+
+    &:focus {
+      border-color: currentColor;
+      outline: none;
+    }
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    grid-column-gap: 1.2rem;
+    justify-content: end;
+    justify-items: start;
+
+    padding: 0 1rem;
+    list-style: none;
+    transition: all 0.2s;
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      color: currentColor;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: $flax;
+      }
+    }
+
+    @media only screen and(max-width: $large-bp) {
+      display: none;
+    }
+  }
+
+  &__nav-btn {
+    display: none;
+    height: 2px;
+    width: 4rem;
+    background-color: #111;
+    border: none;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 6rem;
+      transform: translateY(-3rem);
+      background-color: red;
+    }
+
+    @media only screen and(max-width: $large-bp) {
+      display: block;
+    }
+  }
+}
