@@ -67,15 +67,16 @@
   }
 
   .top-border {
+    background-color: $dark-purple;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
     font-size: 7.5rem;
-    color: $color-grey-dark-2;
+    color: $flax;
     font-style: italic;
     letter-spacing: 1rem;
     text-transform: uppercase;
     text-shadow: 2px 3px 1px rgba($color-grey-dark-2, 0.5),
-      3px 4px 8px rgba(0, 0, 0, 0.55);
+      3px 4px 6px rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     z-index: 5;
@@ -97,7 +98,6 @@
 .wine-section {
   grid-row: 4 / 5;
   .top-border--wine {
-    background-color: darken($dark-purple, 2%);
     clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 50%, 40% 100%, 0% 100%);
     padding-left: 2vw;
 
@@ -130,7 +130,6 @@
 .whiskey-section {
   grid-row: 5 / 6;
   .top-border--whiskey {
-    background-color: darken($dark-purple, 3%);
     justify-content: flex-end;
     padding-right: 2vw;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 50% 50%, 0 50%);
@@ -218,7 +217,7 @@
         align-items: center;
 
         &--1 {
-          background-image: url("../img/beer-1-banner.jpg");
+          background-image: url("../img/beer-1-banner-sm.jpg");
           background-size: cover;
           background-position: center;
 
@@ -262,6 +261,8 @@
 
   &__figure {
     grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
 
     img {
       @include objectImage;
