@@ -15,10 +15,20 @@
   grid-template-rows: repeat(6, 6vw);
   grid-gap: 1rem;
 
+  @media only screen and(max-width: $medium-bp) {
+    grid-gap: 2px;
+    padding: 2px;
+    grid-template-rows: repeat(6, 10vw);
+  }
+
   &__item {
     position: relative;
     transition: all 1.4s ease-in-out;
     border: solid 4px rgba($flax, 0.1);
+
+    @media only screen and(max-width: $medium-bp) {
+      border: none;
+    }
 
     &__overlay {
       position: absolute;

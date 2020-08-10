@@ -4,13 +4,19 @@
   grid-row: 1 / 2;
 
   display: grid;
-  // grid-template-columns: 1fr repeat(2, max-content);
   grid-template-columns: 1fr 30rem max-content;
   grid-column-gap: 2rem;
   align-items: center;
   padding: 0 0.5rem;
-
   color: $dark-purple;
+  padding: 0 2rem;
+
+  @media only screen and(max-width: $medium-bp) {
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, max-content);
+    padding: 1rem 2rem;
+    grid-row-gap: 2rem;
+  }
 
   &__title {
     position: relative;
@@ -25,11 +31,25 @@
       2px 2px 2px rgba($dark-purple, 0.4), 2px 2px 0 $color-grey-light-1,
       3px 3px 0 $color-grey-light-1, -1px -1px 0 $color-grey-light-1,
       -2px -2px 0 $color-grey-light-1, -3px 3px 0 $color-grey-light-1;
+
+    @media only screen and(max-width: $medium-bp) {
+      grid-row: 2 / -1;
+      grid-column: 1 / -1;
+      transform: translateX(0);
+      font-size: 4rem;
+      text-shadow: 1px 1px 1px rgba($dark-purple, 0.35),
+        2px 2px 2px rgba($dark-purple, 0.4);
+    }
   }
 
   &__search-container {
     position: relative;
     width: 100%;
+    max-width: 38em;
+
+    @media only screen and(max-width: $medium-bp) {
+      justify-self: center;
+    }
 
     svg {
       position: absolute;
@@ -93,12 +113,21 @@
     background-color: #111;
     border: none;
 
-    &::before {
+    &::before,
+    &:after {
       display: block;
       content: "";
-      width: 6rem;
-      transform: translateY(-3rem);
-      background-color: red;
+      width: 4rem;
+      background-color: #111;
+      height: 2px;
+    }
+
+    &:before {
+      transform: translateY(-0.8rem);
+    }
+
+    &:after {
+      transform: translateY(0.6rem);
     }
 
     @media only screen and(max-width: $large-bp) {

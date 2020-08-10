@@ -38,6 +38,10 @@ html {
     font-size: 75%;
   }
 
+  @media only screen and(min-width: 2500px) {
+    font-size: 100%;
+  }
+
   @media only screen and(max-width: $small-bp) {
     font-size: 56.25%;
   }
@@ -56,4 +60,11 @@ body {
       max-content
     );
   grid-template-columns: repeat(16, 1fr);
+
+  @media only screen and(max-width: $medium-bp) {
+    grid-template-rows: max-content repeat(2, min-content) repeat(2, 80vh) repeat(
+        2,
+        max-content
+      );
+  }
 }
