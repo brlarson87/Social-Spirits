@@ -62,7 +62,14 @@ body {
   grid-template-columns: repeat(16, 1fr);
 
   @media only screen and(max-width: $medium-bp) {
-    grid-template-rows: max-content repeat(2, min-content) repeat(2, 80vh) repeat(
+    grid-template-rows: max-content repeat(2, min-content) repeat(2, 600px) repeat(
+        2,
+        max-content
+      );
+  }
+
+  @media screen and (max-height: 650px) {
+    grid-template-rows: max-content repeat(2, min-content) repeat(2, 600px) repeat(
         2,
         max-content
       );
