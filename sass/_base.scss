@@ -45,6 +45,10 @@ html {
   @media only screen and(max-width: $small-bp) {
     font-size: 56.25%;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -68,7 +72,7 @@ body {
       );
   }
 
-  @media screen and (max-height: 650px) {
+  @media screen and (max-height: 700px) {
     grid-template-rows: max-content repeat(2, min-content) repeat(2, 600px) repeat(
         2,
         max-content

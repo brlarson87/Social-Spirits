@@ -18,6 +18,13 @@
   font-family: $font-secondary;
   color: $color-grey-light-1;
   margin-bottom: 2vw;
+
+  @media only screen and(max-width: 360px) {
+    font-size: 3.5rem;
+    letter-spacing: 1.2rem;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .social-links {
@@ -25,6 +32,10 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and(max-width: 360px) {
+    width: 30rem;
+  }
 
   .social-link {
     width: 5rem;
@@ -35,6 +46,11 @@
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.15);
+
+    @media only screen and(max-width: 360px) {
+      width: 4rem;
+      height: 4rem;
+    }
 
     &__link {
       display: inline-block;
@@ -51,9 +67,19 @@
         inset -5px 1rem 1rem rgba(0, 0, 0, 0.3);
       transition: all 0.35s;
 
-      &:hover {
-        box-shadow: inset 1rem 1rem 1rem rgba(0, 0, 0, 0.4),
-          inset -1rem -1rem 1rem rgba(0, 0, 0, 0.35);
+      
+
+      @media not all and (hover: none) {
+        &:hover {
+          box-shadow: inset 1rem 1rem 1rem rgba(0, 0, 0, 0.4),
+            inset -1rem -1rem 1rem rgba(0, 0, 0, 0.35);
+        }
+      }
+
+      @media only screen and(max-width: 360px) {
+        width: 2.75rem;
+        height: 2.75rem;
+        box-shadow: none;
       }
     }
 
