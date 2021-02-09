@@ -41,3 +41,15 @@ const findOrignalRandom = () => {
 const randomIndex = () => {
   return Math.floor(Math.random() * previousIndexes.length - 1) + 1;
 };
+
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-menu");
+const slider = document.querySelector('.slide-menu');
+
+menuBtn.addEventListener('click', () => {
+  slider.style.width = '250px'; 
+});
+
+closeBtn.addEventListener('click', () => {
+  slider.style.width = '0';
+});

@@ -21,6 +21,11 @@
     grid-template-rows: repeat(6, 10vw);
   }
 
+  @media only screen and(max-width: $small-bp) {
+    grid-gap: 0;
+    padding: 0;
+  }
+
   &__item {
     position: relative;
     transition: all 1.4s ease-in-out;

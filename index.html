@@ -18,6 +18,7 @@
     <div class="container">
       <!--HEADER-->
       <header class="header">
+
         <h1 class="header__title">Social Spirits</h1>
 
         <div class="header__search-container">
@@ -31,7 +32,7 @@
             <use xlink:href="/img/sprites.svg#icon-search"></use>
           </svg>
         </div>
-
+        
         <ul class="nav">
           <li class="nav__item">
             <a href="#" class="nav__link">Sign in</a>
@@ -53,12 +54,39 @@
           </li>
         </ul>
 
-        <button
+        <div class="button-wrapper" id="menu-btn">
+          <span
           class="header__nav-btn"
           tabindex="0"
           role="button"
           aria-pressed="false"
-        ></button>
+        ></span>
+      </div>
+
+      <div class="slide-menu">
+        <span class="close-menu" id="close-menu">&times;</span>
+        <ul>
+          <li>
+            <a href="#" >Sign in</a>
+          </li>
+          <li>
+            <a href="#" >Sign up</a>
+          </li>
+          <li>
+            <a href="#" >Community</a>
+          </li>
+          <li>
+            <a href="#" >Wine</a>
+          </li>
+          <li>
+            <a href="#" >Whiskey</a>
+          </li>
+          <li>
+            <a href="#" >Craft Beer</a>
+          </li>
+        </ul>
+      </div>
+        
       </header>
       <!--END HEADER-->
 

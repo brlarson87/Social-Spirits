@@ -119,6 +119,11 @@ body {
     @media only screen and (max-width: 75em) {
       .header .nav {
         display: none; } }
+  .header .button-wrapper {
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; }
   .header__nav-btn {
     display: none;
     height: 2px;
@@ -139,6 +144,45 @@ body {
       .header__nav-btn {
         display: block; } }
 
+.slide-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #eed;
+  width: 0;
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+  z-index: 35;
+  transition: all .3s; }
+  @media only screen and (min-width: 75em) {
+    .slide-menu {
+      width: 0 !important; } }
+  .slide-menu ul {
+    list-style: none;
+    margin-top: -10px; }
+  .slide-menu li {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    padding-left: 20px; }
+  .slide-menu a {
+    color: #111;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: all .3s; }
+    @media only screen and (min-width: 43.75em) {
+      .slide-menu a:hover {
+        background-color: #fffde3;
+        color: #e0d68aff; } }
+
+.close-menu {
+  font-size: 55px;
+  padding-left: 20px;
+  cursor: pointer; }
+
 .banner {
   background-color: #320a28ff;
   background-image: linear-gradient(to bottom right, rgba(50, 10, 40, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(to bottom left, #320a28ff, #000);
@@ -154,6 +198,10 @@ body {
       grid-gap: 2px;
       padding: 2px;
       grid-template-rows: repeat(6, 10vw); } }
+  @media only screen and (max-width: 50em) {
+    .banner {
+      grid-gap: 0;
+      padding: 0; } }
   .banner__item {
     position: relative;
     transition: all 1.4s ease-in-out;
