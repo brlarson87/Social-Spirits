@@ -42,6 +42,7 @@ const randomIndex = () => {
   return Math.floor(Math.random() * previousIndexes.length - 1) + 1;
 };
 
+/************************Menu Slider******************************/
 const menuBtn = document.getElementById("menu-btn");
 const closeBtn = document.getElementById("close-menu");
 const slider = document.querySelector('.slide-menu');
