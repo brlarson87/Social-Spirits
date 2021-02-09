@@ -79,10 +79,13 @@ body {
         justify-self: center; } }
     .header__search-container svg {
       position: absolute;
-      top: 0.8rem;
-      right: 1rem;
+      top: 10px;
+      right: 3%;
       fill: #e0d68aff;
       cursor: pointer; }
+      @media only screen and (max-width: 50em) {
+        .header__search-container svg {
+          top: 11px; } }
   .header__search-bar {
     justify-self: center;
     width: 100%;

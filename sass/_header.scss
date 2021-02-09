@@ -53,10 +53,16 @@
 
     svg {
       position: absolute;
-      top: 0.8rem;
-      right: 1rem;
+      top: 10px;
+      right: 3%;
       fill: $flax;
       cursor: pointer;
+
+      
+
+      @media only screen and(max-width: $small-bp) {
+        top: 11px;
+      }
     }
   }
 
