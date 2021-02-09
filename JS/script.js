@@ -47,16 +47,13 @@ const menuBtn = document.getElementById("menu-btn");
 const closeBtn = document.getElementById("close-menu");
 const slider = document.querySelector('.slide-menu');
 const body = document.getElementsByTagName("BODY")[0];
-const html = document.getElementsByTagName("html")[0];
 
 menuBtn.addEventListener('click', () => {
   slider.style.width = '250px';
   body.style.overflowY = 'hidden';
-  html.style.overflowY = 'hidden'; 
 });
 
 closeBtn.addEventListener('click', () => {
   slider.style.width = '0';
   body.style.overflowY = 'scroll';
-  html.style.overflowY = 'scroll';  
 });
