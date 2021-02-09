@@ -17,6 +17,9 @@ html {
   @media only screen and (max-width: 50em) {
     html {
       font-size: 56.25%; } }
+  @media only screen and (max-width: 450px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Lora", serif;
@@ -29,7 +32,7 @@ body {
   @media only screen and (max-width: 43.75em) {
     .container {
       grid-template-rows: max-content repeat(2, min-content) repeat(2, 600px) repeat(2, max-content); } }
-  @media screen and (max-height: 650px) {
+  @media screen and (max-height: 700px) {
     .container {
       grid-template-rows: max-content repeat(2, min-content) repeat(2, 600px) repeat(2, max-content); } }
 
@@ -88,8 +91,7 @@ body {
     border: solid 1px #aaa;
     font-family: "Lora", serif;
     color: currentColor;
-    text-transform: uppercase;
-    font-size: 1.1rem; }
+    text-transform: uppercase; }
     .header__search-bar:focus {
       border-color: currentColor;
       outline: none; }
@@ -201,74 +203,61 @@ body {
     object-fit: cover; }
 
 .features {
-  grid-column: 2 / 16;
-  grid-row: 3 / 4;
-  padding: 10vw 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   justify-items: center;
   align-content: center;
-  grid-column-gap: 2rem; }
-  @media only screen and (max-width: 100em) {
-    .features {
-      grid-column: 3 / 15; } }
-  @media only screen and (max-width: 75em) {
-    .features {
-      grid-column: 2 / 16; } }
+  grid-column-gap: 2rem;
+  grid-column: 2 / 16;
+  grid-row: 3 / 4;
+  padding: 10vw 0; }
   @media only screen and (max-width: 100em) {
     .features {
       grid-template-columns: repeat(2, 1fr);
       grid-row-gap: 12rem;
-      grid-column-gap: 4rem; } }
-  @media only screen and (max-width: 50em) {
+      grid-column-gap: 4rem;
+      grid-column: 4 / 14; } }
+  @media only screen and (max-width: 75em) {
     .features {
-      display: block;
-      margin: 0 auto; } }
+      grid-column: 3 / 15; } }
+  @media only screen and (max-width: 740px) {
+    .features {
+      grid-template-columns: 1fr;
+      grid-row-gap: 6rem;
+      padding: 15vw 0; } }
   .features__card {
-    width: 19vw;
-    height: 25vw;
-    background-color: #fff;
-    justify-self: center;
-    max-width: 425px;
-    max-height: 500px;
+    height: 419px;
+    width: 319px;
     border: solid 5px rgba(203, 145, 115, 0.33);
     padding: 1vw 1.5rem;
     border-radius: 2rem;
     text-align: center;
     box-shadow: inset 5px 4px 2px rgba(0, 0, 0, 0.12), inset -4px -5px 2px rgba(0, 0, 0, 0.12), 4px 4px 12px rgba(0, 0, 0, 0.2), -4px 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.2s; }
-    @media only screen and (max-width: 100em) {
+    @media only screen and (max-width: 550px) {
       .features__card {
-        width: 38vw;
-        height: 45vw; } }
-    @media only screen and (max-width: 50em) {
-      .features__card {
-        width: 70vw;
-        height: 78vw; }
-        .features__card:not(:last-child) {
-          margin-bottom: 4rem; } }
-    .features__card:hover {
-      transform: translateY(-1rem);
-      box-shadow: inset 4px 4px 2px rgba(0, 0, 0, 0.1), inset -4px -4px 2px rgba(0, 0, 0, 0.1), 4px 3rem 16px rgba(0, 0, 0, 0.2), -4px 4px 12px rgba(0, 0, 0, 0.2); }
+        height: 375px;
+        width: 270px; } }
+    @media not all and (hover: none) {
+      .features__card:hover {
+        transform: translateY(-1rem);
+        box-shadow: inset 4px 4px 2px rgba(0, 0, 0, 0.1), inset -4px -4px 2px rgba(0, 0, 0, 0.1), 4px 3rem 16px rgba(0, 0, 0, 0.2), -4px 4px 12px rgba(0, 0, 0, 0.2); } }
     .features__card__svg {
       width: 3.5rem;
       height: 3.5rem;
       fill: #cb9173ff;
       margin: 1.5rem 0; }
     .features__card__description {
-      font-size: 1.4rem;
-      line-height: 1.3;
+      font-size: 1.45rem;
+      line-height: 1.4;
       color: #6d5d4b;
       font-style: italic;
       padding: 0.5rem 0.5rem; }
-      @media only screen and (max-width: 100em) {
+      @media only screen and (max-width: 1000px) {
         .features__card__description {
-          font-size: 1.8rem;
-          line-height: 1.6; } }
-      @media only screen and (max-width: 50em) {
-        .features__card__description {
-          font-size: 2.2rem; } }
+          font-size: 2rem;
+          line-height: 2.6rem; } }
 
 .section {
   grid-column: 1 / -1;
@@ -292,8 +281,14 @@ body {
       .section__description-box {
         flex-direction: column;
         justify-content: center; } }
+    @media only screen and (max-width: 430px) {
+      .section__description-box {
+        justify-content: center; } }
     .section__description-box button {
       align-self: center; }
+      @media only screen and (max-width: 430px) {
+        .section__description-box button {
+          align-self: normal; } }
     .section__description-box p {
       text-align: center;
       font-size: 3.4rem;
@@ -305,19 +300,28 @@ body {
           width: 95%;
           font-size: 2.5rem;
           transform: translateY(-2rem); } }
+      @media only screen and (max-width: 430px) {
+        .section__description-box p {
+          font-size: 2.1rem; } }
     .section__description-box--whiskey {
       grid-column: 2 / 10; }
       @media only screen and (max-width: 43.75em) {
         .section__description-box--whiskey {
           flex-direction: column-reverse;
-          justify-content: space-between; }
-          .section__description-box--whiskey button {
-            align-self: flex-end; } }
+          justify-content: space-between; } }
+      @media only screen and (max-width: 430px) {
+        .section__description-box--whiskey {
+          justify-content: center; } }
+      @media only screen and (max-width: 430px) {
+        .section__description-box--whiskey button {
+          align-self: normal; } }
     .section__description-box--wine {
       grid-column: 4 / 12; }
-      @media only screen and (max-width: 43.75em) {
-        .section__description-box--wine button {
-          align-self: flex-start; } }
+      .section__description-box--wine button {
+        align-self: flex-start; }
+        @media only screen and (max-width: 430px) {
+          .section__description-box--wine button {
+            align-self: normal; } }
   .section .top-border {
     background-color: #320a28ff;
     grid-row: 1 / 2;
@@ -336,6 +340,9 @@ body {
       .section .top-border {
         font-size: 5.5rem;
         letter-spacing: 0.5rem; } }
+    @media only screen and (max-width: 430px) {
+      .section .top-border {
+        font-size: 4rem; } }
   .section .border-bottom {
     grid-row: 4 / -1;
     grid-column: 1 / -1;
@@ -550,12 +557,21 @@ body {
   font-family: "Alegreya SC", serif;
   color: #f9f7f6;
   margin-bottom: 2vw; }
+  @media only screen and (max-width: 360px) {
+    .tag {
+      font-size: 3.5rem;
+      letter-spacing: 1.2rem;
+      padding: 0;
+      margin-bottom: 3rem; } }
 
 .social-links {
   width: 40rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 360px) {
+    .social-links {
+      width: 30rem; } }
   .social-links .social-link {
     width: 5rem;
     height: 5rem;
@@ -565,6 +581,10 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.15); }
+    @media only screen and (max-width: 360px) {
+      .social-links .social-link {
+        width: 4rem;
+        height: 4rem; } }
     .social-links .social-link__link {
       display: inline-block;
       height: 4rem;
@@ -578,8 +598,14 @@ body {
       border-radius: 50%;
       box-shadow: inset 1rem 1rem 1rem rgba(0, 0, 0, 0.3), inset -5px 1rem 1rem rgba(0, 0, 0, 0.3);
       transition: all 0.35s; }
-      .social-links .social-link__link:hover {
-        box-shadow: inset 1rem 1rem 1rem rgba(0, 0, 0, 0.4), inset -1rem -1rem 1rem rgba(0, 0, 0, 0.35); }
+      @media not all and (hover: none) {
+        .social-links .social-link__link:hover {
+          box-shadow: inset 1rem 1rem 1rem rgba(0, 0, 0, 0.4), inset -1rem -1rem 1rem rgba(0, 0, 0, 0.35); } }
+      @media only screen and (max-width: 360px) {
+        .social-links .social-link__link {
+          width: 2.75rem;
+          height: 2.75rem;
+          box-shadow: none; } }
     .social-links .social-link svg {
       height: 3rem;
       width: 3rem;
@@ -616,6 +642,13 @@ body {
   font-family: "Alegreya SC", serif;
   transition: all 0.2s;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); }
+  @media only screen and (max-width: 400px) {
+    .button {
+      font-size: 1.9rem;
+      padding: 1.2rem 3rem; } }
+  @media only screen and (max-width: 315px) {
+    .button {
+      font-size: 1.7rem; } }
   .button:hover {
     background-color: #2a0821; }
   .button:active {
@@ -648,6 +681,14 @@ body {
     .small-heading {
       transform: rotate(-35deg) translate(4rem, -1rem);
       font-size: 3.8rem; } }
+  @media only screen and (max-width: 450px) {
+    .small-heading {
+      font-size: 3.2rem;
+      color: rgba(50, 10, 40, 0.95);
+      text-shadow: none; } }
+  @media only screen and (max-width: 315px) {
+    .small-heading {
+      font-size: 2.8rem; } }
 
 .large-heading {
   font-size: 10rem;
@@ -661,6 +702,14 @@ body {
   @media only screen and (max-width: 50em) {
     .large-heading {
       font-size: 6rem; } }
+  @media only screen and (max-width: 450px) {
+    .large-heading {
+      font-size: 4.8rem;
+      color: rgba(109, 93, 75, 0.85);
+      text-shadow: 1px 1px 3px rgba(109, 93, 75, 0.75); } }
+  @media only screen and (max-width: 315px) {
+    .large-heading {
+      font-size: 3.5rem; } }
 
 .u-margin-bottom-med {
   margin-bottom: 1rem !important; }
