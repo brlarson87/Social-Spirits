@@ -147,7 +147,7 @@ body {
 .slide-menu {
   position: fixed;
   top: 0;
-  bottom: 0;
+  height: 100%;
   right: 0;
   background-color: #eed;
   width: 0;
