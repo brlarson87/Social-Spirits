@@ -152,8 +152,7 @@ body {
   background-color: #eed;
   width: 0;
   box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-  z-index: 35;
-  transition: width .3s; }
+  z-index: 35; }
   @media only screen and (min-width: 75em) {
     .slide-menu {
       width: 0 !important; } }
